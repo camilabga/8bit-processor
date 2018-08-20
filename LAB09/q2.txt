@@ -1,0 +1,23 @@
+	MOV [238], 255
+	MOV [236], 1
+loop1:	INC A
+	CMP A, 9
+	JNZ loop1
+
+	MOV [236], 0
+	MOV A, 0
+	MOV [238], 64
+	MOV A, 0
+	MOV [238], 0
+loop2:	INC B
+	CMP B, 3
+	JNZ loop2
+
+	MOV [238], 149
+	MOV A, 0
+	MOV [238], 255
+loop:	MOV A, [238]
+	CMP A, 255
+	JZ loop
+
+cabou:	JMP cabou

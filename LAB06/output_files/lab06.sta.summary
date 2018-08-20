@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_div:DIVCLOCK|ax'
+Slack : -4.712
+TNS   : -1340.362
+
+Type  : Slow Model Setup 'clk_27'
+Slack : -2.683
+TNS   : -44.022
+
+Type  : Slow Model Setup 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : -2.620
+TNS   : -9.311
+
+Type  : Slow Model Setup 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : -0.886
+TNS   : -5.698
+
+Type  : Slow Model Hold 'clk_div:DIVCLOCK|ax'
+Slack : -4.611
+TNS   : -637.658
+
+Type  : Slow Model Hold 'clk_27'
+Slack : -2.503
+TNS   : -2.503
+
+Type  : Slow Model Hold 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : -2.441
+TNS   : -9.333
+
+Type  : Slow Model Hold 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk_div:DIVCLOCK|ax'
+Slack : -2.000
+TNS   : -631.000
+
+Type  : Slow Model Minimum Pulse Width 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : -1.423
+TNS   : -30.768
+
+Type  : Slow Model Minimum Pulse Width 'clk_27'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Slow Model Minimum Pulse Width 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk_div:DIVCLOCK|ax'
+Slack : -2.306
+TNS   : -613.184
+
+Type  : Fast Model Setup 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : -0.958
+TNS   : -3.334
+
+Type  : Fast Model Setup 'clk_27'
+Slack : -0.760
+TNS   : -8.422
+
+Type  : Fast Model Setup 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk_div:DIVCLOCK|ax'
+Slack : -2.421
+TNS   : -372.710
+
+Type  : Fast Model Hold 'clk_27'
+Slack : -1.551
+TNS   : -1.551
+
+Type  : Fast Model Hold 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : -1.398
+TNS   : -5.401
+
+Type  : Fast Model Hold 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk_div:DIVCLOCK|ax'
+Slack : -2.000
+TNS   : -631.000
+
+Type  : Fast Model Minimum Pulse Width 'control_unit:CONTROLLER00|clk_pcir:CLOCKpcIR|ax'
+Slack : -1.423
+TNS   : -30.768
+
+Type  : Fast Model Minimum Pulse Width 'clk_27'
+Slack : -1.380
+TNS   : -26.380
+
+Type  : Fast Model Minimum Pulse Width 'control_unit:CONTROLLER00|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12|qS'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

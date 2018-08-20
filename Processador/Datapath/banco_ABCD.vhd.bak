@@ -1,0 +1,62 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity banco_ABCD is
+	port(	write_ABCD				: in 	std_logic_vector(7 downto 0);
+	     	r_addr					: in	std_logic_vector(1 downto 0);
+			clk, w_ABCD, r_ABCD	: in  std_logic;
+	     	out_ABCD, A				: out std_logic_vector(7 downto 0));
+end banco_ABCD;
+
+architecture ckt of banco_ABCD is
+	component ula is
+		port(A,entrada			:in  std_logic_vector(7 downto 0);
+			  sel_op				:in  std_logic_vector(3 downto 0);
+			  clr, clk, ld		:in  std_logic;
+			  saida				:out std_logic_vector(7 downto 0);
+			  c,z					:out std_logic);
+	end component;
+
+	component Registrador8Bits is
+		port(clock,ld,Preset,Clear	: in std_logic;
+				D: in std_logic_vector(7 downto 0);
+				Q:out std_logic_vector(7 downto 0));
+	end component;
+
+	component mux2x1_8bits is
+		port(entrada1,entrada2	: in  std_logic_vector(7 downto 0);
+				sel					: in  std_logic;
+				saida					: out std_logic_vector(7 downto 0));
+	end component;
+
+	component mux4x1_8bits is
+		port(entrada1,entrada2,
+			entrada3,entrada4	: in  std_logic_vector(7 downto 0);
+			sel					: in  std_logic_vector(1 downto 0);
+			saida				: out std_logic_vector(7 downto 0));
+	end component;
+
+	signal spc_sp,sout_mar_mem, sout_ABCD, sout_mar_ABCD,sout_mar_ABCD, saddr_mem, 
+			smux_out_se_mult, sr_addr
+	
+	: std_logic_vector(7 downto 0);
+	
+	
+begin
+	mux_addr 		: mux4x1_8bits port map(spc_sp, sout_mar_mem, sout_ABCD, sout_mar_ABCD, Sel_addr_mem, saddr_mem);
+	addr_mem <= saddr_mem;
+
+	mar_abcd 		: Registrador8Bits 	port map(clk,Ld_mar_ABCD ,'1','1', read_data, sout_mar_ABCD);
+	mar_mem 			: Registrador8Bits 	port map(clk,Ld_mar_mem  ,'1','1', read_data, sout_mar_mem);
+	
+	mux_se_mult		: mux2x1_8bits			port map(sout_mar_ABCD,"00000000",Sel_se_mult, smux_out_se_mult);
+	mux_addr_ABCD	: mux2x1_8bits			port map(smux_out_se_mult,read_data,Sel_addr_ABCD, sr_addr);
+	
+	mux_mar_mem		: mux2x1_8bits			port map(read_data,read_data,Sel_addr_ABCD, sr_addr);
+	
+	
+	
+
+end ckt;
+
+

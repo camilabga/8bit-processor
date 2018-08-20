@@ -1,0 +1,35 @@
+	MOV [232], 0
+	MOV [233], 1
+	MOV [234], 0
+	MOV [235], 0
+
+	MOV [0], 12
+	MOV C, [0]
+	
+	CALL start
+	HLT
+
+start:	MOV A, [232]
+	MOV B, [233]
+
+	ADD A, [234]
+	ADD B, [235]
+	JC carry
+
+back:	MOV D, [232]
+	MOV [234], D
+	MOV D, [233]
+	MOV [235], D
+
+	MOV [232], A
+	MOV [233], B
+	
+	DEC C
+	CMP C, 1
+	JE fim
+	JMP start
+
+carry:	INC A
+	JMP back
+
+fim: RET

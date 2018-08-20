@@ -1,0 +1,15 @@
+
+State Machine - |Processador|controller:controller_pm|mde:mde_pm|y_present
+Name y_present.fim y_present.e8 y_present.e7 y_present.e6 y_present.e5 y_present.e4 y_present.e3 y_present.e2 y_present.e1 y_present.e0 y_present.inicio2 y_present.inicio 
+y_present.inicio 0 0 0 0 0 0 0 0 0 0 0 0 
+y_present.inicio2 0 0 0 0 0 0 0 0 0 0 1 1 
+y_present.e0 0 0 0 0 0 0 0 0 0 1 0 1 
+y_present.e1 0 0 0 0 0 0 0 0 1 0 0 1 
+y_present.e2 0 0 0 0 0 0 0 1 0 0 0 1 
+y_present.e3 0 0 0 0 0 0 1 0 0 0 0 1 
+y_present.e4 0 0 0 0 0 1 0 0 0 0 0 1 
+y_present.e5 0 0 0 0 1 0 0 0 0 0 0 1 
+y_present.e6 0 0 0 1 0 0 0 0 0 0 0 1 
+y_present.e7 0 0 1 0 0 0 0 0 0 0 0 1 
+y_present.e8 0 1 0 0 0 0 0 0 0 0 0 1 
+y_present.fim 1 0 0 0 0 0 0 0 0 0 0 1 

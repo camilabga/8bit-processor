@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SD07 is
+	port(	clk27				: in  std_logic;
+			SW7_0, SW15_8					: in  std_logic_vector(7 downto 0);
+			KEY3_0							: in  std_logic_vector(3 downto 0);
+			
+			HEX0,HEX1,HEX2,HEX3,
+			HEX4,HEX5,HEX6,HEX7			: out std_logic_vector(6 downto 0);
+			LEDR7_0,LEDR15_8,LEDG7_0	: out std_logic_vector(7 downto 0)
+			
+			
+			);
+end SD07;
+
+architecture ckt of SD07 is
+	component Processador is
+		port(	clk27,ram_en					: in  std_logic;
+				per_ram_in			: in 	std_logic_vector(7 downto 0);
+				addr_perif			: in	std_logic_vector(7 downto 0);
+				per_ram_out			: out	std_logic_vector(7 downto 0)
+				);
+	end component;
+
+
+
+
+  begin
+  
+end arq;
+
+

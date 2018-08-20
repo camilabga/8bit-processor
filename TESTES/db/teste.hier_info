@@ -1,0 +1,836 @@
+|control_unit
+clock => clk_div:CLOCKpcIR.clk_in
+clear => instruction_register:IR0.clear
+rom_out[0] => instruction_register:IR0.data_in[0]
+rom_out[1] => instruction_register:IR0.data_in[1]
+rom_out[2] => instruction_register:IR0.data_in[2]
+rom_out[3] => instruction_register:IR0.data_in[3]
+rom_out[4] => instruction_register:IR0.data_in[4]
+rom_out[5] => instruction_register:IR0.data_in[5]
+rom_out[6] => instruction_register:IR0.data_in[6]
+rom_out[7] => instruction_register:IR0.data_in[7]
+rom_out[8] => instruction_register:IR0.data_in[8]
+rom_out[9] => instruction_register:IR0.data_in[9]
+rom_out[10] => instruction_register:IR0.data_in[10]
+rom_out[11] => instruction_register:IR0.data_in[11]
+rom_out[12] => instruction_register:IR0.data_in[12]
+rom_out[13] => instruction_register:IR0.data_in[13]
+rom_out[14] => instruction_register:IR0.data_in[14]
+rom_out[15] => instruction_register:IR0.data_in[15]
+rom_addr[0] <= program_counter:PC0.addr[0]
+rom_addr[1] <= program_counter:PC0.addr[1]
+rom_addr[2] <= program_counter:PC0.addr[2]
+rom_addr[3] <= program_counter:PC0.addr[3]
+rom_addr[4] <= program_counter:PC0.addr[4]
+rom_addr[5] <= program_counter:PC0.addr[5]
+rom_addr[6] <= program_counter:PC0.addr[6]
+rom_addr[7] <= program_counter:PC0.addr[7]
+D_addr[0] <= instruction_register:IR0.data_out[0]
+D_addr[1] <= instruction_register:IR0.data_out[1]
+D_addr[2] <= instruction_register:IR0.data_out[2]
+D_addr[3] <= instruction_register:IR0.data_out[3]
+D_addr[4] <= instruction_register:IR0.data_out[4]
+D_addr[5] <= instruction_register:IR0.data_out[5]
+D_addr[6] <= instruction_register:IR0.data_out[6]
+D_addr[7] <= instruction_register:IR0.data_out[7]
+D_wr <= comparador:OPCODE01.aIGUALb
+D_rd <= comparador:OPCODE00.aIGUALb
+RF_s <= comparador:OPCODE00.aIGUALb
+RF_W_wr <= RF_W_wr.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rp_rd <= RF_Rp_rd.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rq_rd <= comparador:OPCODE02.aIGUALb
+alu_s0 <= comparador:OPCODE02.aIGUALb
+RF_W_addr[0] <= instruction_register:IR0.data_out[8]
+RF_W_addr[1] <= instruction_register:IR0.data_out[9]
+RF_W_addr[2] <= instruction_register:IR0.data_out[10]
+RF_W_addr[3] <= instruction_register:IR0.data_out[11]
+RF_Rp_addr[0] <= RF_Rp_addr[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rp_addr[1] <= RF_Rp_addr[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rp_addr[2] <= RF_Rp_addr[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rp_addr[3] <= RF_Rp_addr[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+RF_Rq_addr[0] <= instruction_register:IR0.data_out[0]
+RF_Rq_addr[1] <= instruction_register:IR0.data_out[1]
+RF_Rq_addr[2] <= instruction_register:IR0.data_out[2]
+RF_Rq_addr[3] <= instruction_register:IR0.data_out[3]
+
+
+|control_unit|comparador:OPCODE00
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+aMENORb <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+aMAIORb <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+aIGUALb <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|comparador:OPCODE01
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+aMENORb <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+aMAIORb <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+aIGUALb <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|comparador:OPCODE02
+a[0] => Equal0.IN3
+a[0] => LessThan0.IN4
+a[0] => LessThan1.IN4
+a[1] => Equal0.IN2
+a[1] => LessThan0.IN3
+a[1] => LessThan1.IN3
+a[2] => Equal0.IN1
+a[2] => LessThan0.IN2
+a[2] => LessThan1.IN2
+a[3] => Equal0.IN0
+a[3] => LessThan0.IN1
+a[3] => LessThan1.IN1
+b[0] => Equal0.IN7
+b[0] => LessThan0.IN8
+b[0] => LessThan1.IN8
+b[1] => Equal0.IN6
+b[1] => LessThan0.IN7
+b[1] => LessThan1.IN7
+b[2] => Equal0.IN5
+b[2] => LessThan0.IN6
+b[2] => LessThan1.IN6
+b[3] => Equal0.IN4
+b[3] => LessThan0.IN5
+b[3] => LessThan1.IN5
+aMENORb <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+aMAIORb <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+aIGUALb <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|clk_div:CLOCKpcIR
+clk_in => ax.CLK
+clk_in => cnt[0].CLK
+clk_in => cnt[1].CLK
+clk_in => cnt[2].CLK
+clk_in => cnt[3].CLK
+clk_in => cnt[4].CLK
+clk_in => cnt[5].CLK
+clk_in => cnt[6].CLK
+clk_in => cnt[7].CLK
+clk_in => cnt[8].CLK
+clk_in => cnt[9].CLK
+clk_in => cnt[10].CLK
+clk_in => cnt[11].CLK
+clk_in => cnt[12].CLK
+clk_in => cnt[13].CLK
+clk_in => cnt[14].CLK
+clk_in => cnt[15].CLK
+clk_in => cnt[16].CLK
+clk_in => cnt[17].CLK
+clk_in => cnt[18].CLK
+clk_in => cnt[19].CLK
+clk_in => cnt[20].CLK
+clk_in => cnt[21].CLK
+clk_in => cnt[22].CLK
+clk_in => cnt[23].CLK
+clk_out <= ax.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0
+data_in[0] => registrador16Bits:REGir.D[0]
+data_in[1] => registrador16Bits:REGir.D[1]
+data_in[2] => registrador16Bits:REGir.D[2]
+data_in[3] => registrador16Bits:REGir.D[3]
+data_in[4] => registrador16Bits:REGir.D[4]
+data_in[5] => registrador16Bits:REGir.D[5]
+data_in[6] => registrador16Bits:REGir.D[6]
+data_in[7] => registrador16Bits:REGir.D[7]
+data_in[8] => registrador16Bits:REGir.D[8]
+data_in[9] => registrador16Bits:REGir.D[9]
+data_in[10] => registrador16Bits:REGir.D[10]
+data_in[11] => registrador16Bits:REGir.D[11]
+data_in[12] => registrador16Bits:REGir.D[12]
+data_in[13] => registrador16Bits:REGir.D[13]
+data_in[14] => registrador16Bits:REGir.D[14]
+data_in[15] => registrador16Bits:REGir.D[15]
+ld => registrador16Bits:REGir.ld
+clock => registrador16Bits:REGir.clock
+clear => registrador16Bits:REGir.Clear
+data_out[0] <= registrador16Bits:REGir.Q[0]
+data_out[1] <= registrador16Bits:REGir.Q[1]
+data_out[2] <= registrador16Bits:REGir.Q[2]
+data_out[3] <= registrador16Bits:REGir.Q[3]
+data_out[4] <= registrador16Bits:REGir.Q[4]
+data_out[5] <= registrador16Bits:REGir.Q[5]
+data_out[6] <= registrador16Bits:REGir.Q[6]
+data_out[7] <= registrador16Bits:REGir.Q[7]
+data_out[8] <= registrador16Bits:REGir.Q[8]
+data_out[9] <= registrador16Bits:REGir.Q[9]
+data_out[10] <= registrador16Bits:REGir.Q[10]
+data_out[11] <= registrador16Bits:REGir.Q[11]
+data_out[12] <= registrador16Bits:REGir.Q[12]
+data_out[13] <= registrador16Bits:REGir.Q[13]
+data_out[14] <= registrador16Bits:REGir.Q[14]
+data_out[15] <= registrador16Bits:REGir.Q[15]
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir
+clock => FFD:FFD0.clk
+clock => FFD:FFD1.clk
+clock => FFD:FFD2.clk
+clock => FFD:FFD3.clk
+clock => FFD:FFD4.clk
+clock => FFD:FFD5.clk
+clock => FFD:FFD6.clk
+clock => FFD:FFD7.clk
+clock => FFD:FFD8.clk
+clock => FFD:FFD9.clk
+clock => FFD:FFD10.clk
+clock => FFD:FFD11.clk
+clock => FFD:FFD12.clk
+clock => FFD:FFD13.clk
+clock => FFD:FFD14.clk
+clock => FFD:FFD15.clk
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+Preset => FFD:FFD0.P
+Preset => FFD:FFD1.P
+Preset => FFD:FFD2.P
+Preset => FFD:FFD3.P
+Preset => FFD:FFD4.P
+Preset => FFD:FFD5.P
+Preset => FFD:FFD6.P
+Preset => FFD:FFD7.P
+Preset => FFD:FFD8.P
+Preset => FFD:FFD9.P
+Preset => FFD:FFD10.P
+Preset => FFD:FFD11.P
+Preset => FFD:FFD12.P
+Preset => FFD:FFD13.P
+Preset => FFD:FFD14.P
+Preset => FFD:FFD15.P
+Clear => FFD:FFD0.C
+Clear => FFD:FFD1.C
+Clear => FFD:FFD2.C
+Clear => FFD:FFD3.C
+Clear => FFD:FFD4.C
+Clear => FFD:FFD5.C
+Clear => FFD:FFD6.C
+Clear => FFD:FFD7.C
+Clear => FFD:FFD8.C
+Clear => FFD:FFD9.C
+Clear => FFD:FFD10.C
+Clear => FFD:FFD11.C
+Clear => FFD:FFD12.C
+Clear => FFD:FFD13.C
+Clear => FFD:FFD14.C
+Clear => FFD:FFD15.C
+D[0] => z.IN1
+D[1] => z.IN1
+D[2] => z.IN1
+D[3] => z.IN1
+D[4] => z.IN1
+D[5] => z.IN1
+D[6] => z.IN1
+D[7] => z.IN1
+D[8] => z.IN1
+D[9] => z.IN1
+D[10] => z.IN1
+D[11] => z.IN1
+D[12] => z.IN1
+D[13] => z.IN1
+D[14] => z.IN1
+D[15] => z.IN1
+Q[0] <= FFD:FFD0.q
+Q[1] <= FFD:FFD1.q
+Q[2] <= FFD:FFD2.q
+Q[3] <= FFD:FFD3.q
+Q[4] <= FFD:FFD4.q
+Q[5] <= FFD:FFD5.q
+Q[6] <= FFD:FFD6.q
+Q[7] <= FFD:FFD7.q
+Q[8] <= FFD:FFD8.q
+Q[9] <= FFD:FFD9.q
+Q[10] <= FFD:FFD10.q
+Q[11] <= FFD:FFD11.q
+Q[12] <= FFD:FFD12.q
+Q[13] <= FFD:FFD13.q
+Q[14] <= FFD:FFD14.q
+Q[15] <= FFD:FFD15.q
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD0
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD1
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD2
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD3
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD4
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD5
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD6
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD7
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD8
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD9
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD10
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD11
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD12
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD13
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD14
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|instruction_register:IR0|registrador16Bits:REGir|FFD:FFD15
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0
+PC_clr => contador8bits:CONT0.clr
+PC_inc => contador8bits:CONT0.ld
+PC_clk => contador8bits:CONT0.clk
+addr[0] <= contador8bits:CONT0.saida[0]
+addr[1] <= contador8bits:CONT0.saida[1]
+addr[2] <= contador8bits:CONT0.saida[2]
+addr[3] <= contador8bits:CONT0.saida[3]
+addr[4] <= contador8bits:CONT0.saida[4]
+addr[5] <= contador8bits:CONT0.saida[5]
+addr[6] <= contador8bits:CONT0.saida[6]
+addr[7] <= contador8bits:CONT0.saida[7]
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0
+sobe => inc_dec[7].OUTPUTSELECT
+sobe => inc_dec[6].OUTPUTSELECT
+sobe => inc_dec[5].OUTPUTSELECT
+sobe => inc_dec[4].OUTPUTSELECT
+sobe => inc_dec[3].OUTPUTSELECT
+sobe => inc_dec[2].OUTPUTSELECT
+sobe => inc_dec[1].OUTPUTSELECT
+sobe => inc_dec[0].OUTPUTSELECT
+desce => inc_dec[7].DATAA
+desce => inc_dec[6].DATAA
+desce => inc_dec[5].DATAA
+desce => inc_dec[4].DATAA
+desce => inc_dec[3].DATAA
+desce => inc_dec[2].DATAA
+desce => inc_dec[1].DATAA
+desce => inc_dec[0].DATAA
+clk => registrador8Bits:reg.clock
+ld => registrador8Bits:reg.ld
+clr => registrador8Bits:reg.Clear
+saida[0] <= registrador8Bits:reg.Q[0]
+saida[1] <= registrador8Bits:reg.Q[1]
+saida[2] <= registrador8Bits:reg.Q[2]
+saida[3] <= registrador8Bits:reg.Q[3]
+saida[4] <= registrador8Bits:reg.Q[4]
+saida[5] <= registrador8Bits:reg.Q[5]
+saida[6] <= registrador8Bits:reg.Q[6]
+saida[7] <= registrador8Bits:reg.Q[7]
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador
+a[0] => somadorcompleto:H1.a
+a[1] => somadorcompleto:H2.a
+a[2] => somadorcompleto:H3.a
+a[3] => somadorcompleto:H4.a
+a[4] => somadorcompleto:H5.a
+a[5] => somadorcompleto:H6.a
+a[6] => somadorcompleto:H7.a
+a[7] => somadorcompleto:H8.a
+b[0] => somadorcompleto:H1.b
+b[1] => somadorcompleto:H2.b
+b[2] => somadorcompleto:H3.b
+b[3] => somadorcompleto:H4.b
+b[4] => somadorcompleto:H5.b
+b[5] => somadorcompleto:H6.b
+b[6] => somadorcompleto:H7.b
+b[7] => somadorcompleto:H8.b
+c[0] <= somadorcompleto:H1.s
+c[1] <= somadorcompleto:H2.s
+c[2] <= somadorcompleto:H3.s
+c[3] <= somadorcompleto:H4.s
+c[4] <= somadorcompleto:H5.s
+c[5] <= somadorcompleto:H6.s
+c[6] <= somadorcompleto:H7.s
+c[7] <= somadorcompleto:H8.s
+cin => somadorcompleto:H1.cin
+cout <= somadorcompleto:H8.cout
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H1
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H2
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H3
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H4
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H5
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H6
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H7
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|somador8bits:somador|somadorcompleto:H8
+a => s.IN0
+a => s.IN0
+a => s.IN0
+a => s.IN0
+b => s.IN1
+b => s.IN1
+b => s.IN1
+b => s.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => s.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg
+clock => FFD:FFD0.clk
+clock => FFD:FFD1.clk
+clock => FFD:FFD2.clk
+clock => FFD:FFD3.clk
+clock => FFD:FFD4.clk
+clock => FFD:FFD5.clk
+clock => FFD:FFD6.clk
+clock => FFD:FFD7.clk
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN0
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+ld => z.IN1
+Preset => FFD:FFD0.P
+Preset => FFD:FFD1.P
+Preset => FFD:FFD2.P
+Preset => FFD:FFD3.P
+Preset => FFD:FFD4.P
+Preset => FFD:FFD5.P
+Preset => FFD:FFD6.P
+Preset => FFD:FFD7.P
+Clear => FFD:FFD0.C
+Clear => FFD:FFD1.C
+Clear => FFD:FFD2.C
+Clear => FFD:FFD3.C
+Clear => FFD:FFD4.C
+Clear => FFD:FFD5.C
+Clear => FFD:FFD6.C
+Clear => FFD:FFD7.C
+D[0] => z.IN1
+D[1] => z.IN1
+D[2] => z.IN1
+D[3] => z.IN1
+D[4] => z.IN1
+D[5] => z.IN1
+D[6] => z.IN1
+D[7] => z.IN1
+Q[0] <= FFD:FFD0.q
+Q[1] <= FFD:FFD1.q
+Q[2] <= FFD:FFD2.q
+Q[3] <= FFD:FFD3.q
+Q[4] <= FFD:FFD4.q
+Q[5] <= FFD:FFD5.q
+Q[6] <= FFD:FFD6.q
+Q[7] <= FFD:FFD7.q
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD0
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD1
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD2
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD3
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD4
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD5
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD6
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|control_unit|program_counter:PC0|contador8bits:CONT0|registrador8Bits:reg|FFD:FFD7
+clk => qS.CLK
+D => qS.DATAIN
+P => qS.IN0
+P => qS.PRESET
+C => qS.IN1
+q <= qS.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,15 @@
+	MOV A, 0
+	MOV [236], 2
+	CALL start
+	HLT	
+	
+start:	INC A
+	CMP A, [239]
+	JNZ keep
+	MOV [236], 0
+	JMP start
+
+keep:	CMP A, 0
+	JNZ start
+	MOV [236], 2
+	JMP start

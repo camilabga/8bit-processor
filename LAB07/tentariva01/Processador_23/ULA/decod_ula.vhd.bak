@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decod_ula is
+	port(entrada			:in  std_logic_vector(7 downto 0);
+	     saida				:out std_logic_vector(3 downto 0));
+end decod_ula;
+
+architecture arq of decod_ula is
+
+	res_op <= 	entrada 	when sel_op = "0000" else
+				sres1		when sel_op = "0001" else
+				sres2		when sel_op = "0010" else
+				sres3		when sel_op = "0011" else
+				sres4		when sel_op = "0100" else
+				sres5		when sel_op = "0101" else
+				sres6		when sel_op = "0110" else
+				sres7		when sel_op = "0111" else
+				sres8		when sel_op = "1000" else
+				sres10	when sel_op = "1010" else
+				sres11	when sel_op = "1011" else
+				sres12	when sel_op = "1100" else "00000000";
+					
+end arq;
+
+

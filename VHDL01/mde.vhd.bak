@@ -1,0 +1,51 @@
+library ieee ;
+use ieee . std_logic_1164 .all;
+
+entity mde is
+    port (clk, key0, key1, key2, key3, sw0, r: in std_logic ;
+    ledr0 : out std_logic );
+end mde;
+
+architecture ckt of mde is
+    type state_type is (espera, b1, b2, b3, b4, b5, acertou);
+    signal y_present , y_next : state_type ;
+begin
+    process (sw0, key0, key1, key2, key3, y_present )
+    begin
+        case y_present is
+            when espera =>
+                if key3 = ’0’ then y_next <= b1;
+                else y_next <= espera; end if;
+            when b1 =>
+                if key1 = ’0’ then y_next <= b2;
+                else y_next <= espera; end if;
+            when b2 =>
+                if key0 = ’0’ then y_next <= b3;
+                else y_next <= espera; end if;
+            when b3 =>
+                if key2 = ’0’ then y_next <= b4;
+                else y_next <= espera; end if;
+            when b4 =>
+                if key2 = ’0’ then y_next <= b5;
+                else y_next <= espera; end if;
+            when b5 =>
+                if key1 = ’0’ then y_next <= acertou;
+                else y_next <= espera; end if;
+            when acertou =>
+                if sw0 = ’1’ then y_next <= espera;
+                else y_next <= acertou; end if;
+        end case ;
+    end process ;
+
+    process (clk, r, sw0)
+    begin
+        if r = ’0’ then
+            y_present <= espera;
+        elsif (clk ’ event and clk = ’1’) then
+        
+        y_present <= y_next ;
+        end if;
+    end process ;
+    
+    ledr0 <= ’1’ when y_present = acertou else ’0’;
+end ckt ;

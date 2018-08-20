@@ -1,0 +1,40 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\M328PDEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\Debug\LAB11.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>LAB11.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>LAB11.map</FILE>
+  <FILE>LAB11.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <SETUP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>12</LINE></SETUP>
+  <START><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>25</LINE></START>
+  <BLUE_ON><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>63</LINE></BLUE_ON>
+  <GREEN_ON><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>70</LINE></GREEN_ON>
+  <RED_ON><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>77</LINE></RED_ON>
+  <LOOP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>43</LINE></LOOP>
+  <COUNTER_CONFIG><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>54</LINE></COUNTER_CONFIG>
+  <LOOP2><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>120</LINE></LOOP2>
+  <DELAY_LED><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>105</LINE></DELAY_LED>
+  <ON_BLUE><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>84</LINE></ON_BLUE>
+  <ON_GREEN><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>91</LINE></ON_GREEN>
+  <ON_RED><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>98</LINE></ON_RED>
+  <PASSA_TEMPO><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB11\LAB11\main.asm</FILE><LINE>109</LINE></PASSA_TEMPO>
+ </LABELS>
+</ASSEMBLER_INFO>

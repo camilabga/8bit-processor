@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Registrador8Bits is
+	port(clock,Preset,Clear:in std_logic;
+	D: in std_logic_vector(7 downto 0);
+	Q:out std_logic_vector(7 downto 0));
+end Registrador8Bits;
+
+architecture ckt of Registrador8Bits is
+
+component FFD is
+	port(clk,D,P,C:in std_logic;
+	q:out std_logic);
+end component;
+
+begin 
+
+	FFD1: FFD port map(clock,D(0),Preset,Clear,Q(0));
+	FFD2: FFD port map(clock,D(1),Preset,Clear,Q(1));
+	FFD3: FFD port map(clock,D(2),Preset,Clear,Q(2));
+	FFD4: FFD port map(clock,D(3),Preset,Clear,Q(3));
+	FFD5: FFD port map(clock,D(4),Preset,Clear,Q(4));
+	FFD6: FFD port map(clock,D(5),Preset,Clear,Q(5));
+	FFD7: FFD port map(clock,D(6),Preset,Clear,Q(6));
+	FFD8: FFD port map(clock,D(7),Preset,Clear,Q(7));
+
+end ckt;

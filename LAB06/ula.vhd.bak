@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ula is
+    port(A,B: std_logic_vector(15 downto 0);
+         s0, clock: std_logic;
+         ula_out: std_logic_vector(15 downto 0));
+end ula;
+
+architecture soma_ula of ula is
+    component somador16bits is
+        port(a,b: in  std_logic_vector(15 downto 0);
+            c: out std_logic_vector(15 downto 0);
+            cin: in std_logic;
+            cout: out std_logic);
+    end component;
+
+    component registrador16Bits is
+        port(clock,ld,Preset,Clear	: in std_logic;
+                D: in std_logic_vector(15	downto 0);
+                Q:out std_logic_vector(15 downto 0));
+    end component;
+
+    signal out0, auxA, auxB: std_logic_vector(15 downto 0);
+
+begin
+
+REG0A: registrador16Bits port map(clock, s0, '1', '1', A, auxA);
+REG0B: registrador16Bits port map(clock, s0, '1', '1', B, auxB);
+
+SOM0000: somador16bits port map(auxA, auxB, out0, '0', open);
+
+ula_out <= out0;
+
+end soma_ula;

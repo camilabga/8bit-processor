@@ -1,0 +1,34 @@
+
+State Machine - |lab01|sym_button:SB3|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |lab01|sym_button:SB2|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |lab01|sym_button:SB1|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |lab01|sym_button:SB0|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |lab01|mde:MDE0|y_present
+Name y_present.acertou y_present.b5 y_present.b4 y_present.b3 y_present.b2 y_present.b1 y_present.espera 
+y_present.espera 0 0 0 0 0 0 0 
+y_present.b1 0 0 0 0 0 1 1 
+y_present.b2 0 0 0 0 1 0 1 
+y_present.b3 0 0 0 1 0 0 1 
+y_present.b4 0 0 1 0 0 0 1 
+y_present.b5 0 1 0 0 0 0 1 
+y_present.acertou 1 0 0 0 0 0 1 

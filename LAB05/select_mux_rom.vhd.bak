@@ -1,0 +1,32 @@
+entity select_mux_rom is
+    port(wr, rd, clear, clock: in std_logic;
+         result: out std_logic);
+end select_mux_rom;
+
+architecture wr_rd_sum of select_mux_rom is
+
+component somador4bits is
+	port(a,b:in  std_logic_vector(3 downto 0);
+	     c:out std_logic_vector(3 downto 0);
+	     cin: in std_logic;
+	     cout:out std_logic);
+end component;
+
+component reg4bits is
+    port(registrador_in: in std_logic_vector(3 downto 0);
+        ld, clear, clk: in std_logic;
+        registrador_out: out std_logic_vector(3 downto 0));
+end component;
+
+signal cont, sum_out, current_value: std_logic_vector(3 downto 0);
+
+begin
+
+cont <= "0000" when ((saida = "1111" and wr) or (saida = "0000" and rd)) else
+        "0001" when wr else
+        "1111" when rd;
+
+SOMA: somador4bits port map(current_value, cont, sum_out, '0', open);
+SAVECONT: reg4bits port map(sum_out, wr or rd or clear, not clear, clock, current_value);
+
+end wr_rd_sum;

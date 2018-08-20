@@ -1,0 +1,24 @@
+	MOV [0], 50
+	MOV [1], 6 	
+
+	MOV A, 0
+	MOV B, [1]
+	MOV C, 0
+
+	CALL start
+	HLT
+
+start: 	CMP B, 0
+	JE salva
+	ADD A, [0]
+	JC soma
+
+back:	DEC B
+	JMP start
+
+soma:	ADD C, 1
+	JMP back
+
+salva:	MOV [232], C
+	MOV [233], A
+	RET 

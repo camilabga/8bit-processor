@@ -1,0 +1,2188 @@
+|lab02
+number[0] => registrador:REG0.registrador_in[0]
+number[1] => registrador:REG0.registrador_in[1]
+number[2] => registrador:REG0.registrador_in[2]
+number[3] => registrador:REG0.registrador_in[3]
+number[4] => registrador:REG0.registrador_in[4]
+number[5] => registrador:REG0.registrador_in[5]
+number[6] => registrador:REG0.registrador_in[6]
+number[7] => registrador:REG0.registrador_in[7]
+number[8] => registrador:REG0.registrador_in[8]
+number[9] => registrador:REG0.registrador_in[9]
+number[10] => registrador:REG0.registrador_in[10]
+number[11] => registrador:REG0.registrador_in[11]
+number[12] => registrador:REG0.registrador_in[12]
+number[13] => registrador:REG0.registrador_in[13]
+select_mux[0] => mux8_14:MUX0.SW[0]
+select_mux[1] => mux8_14:MUX0.SW[1]
+select_mux[2] => mux8_14:MUX0.SW[2]
+key2 => registrador:REG0.clk
+key2 => registrador:REG1.clk
+key2 => registrador:REG2.clk
+key2 => registrador:REG3.clk
+key2 => registrador:REG4.clk
+key2 => registrador:REG5.clk
+key2 => registrador:REG6.clk
+key2 => registrador:REG7.clk
+key3 => registrador:REG0.clear
+key3 => registrador:REG1.clear
+key3 => registrador:REG2.clear
+key3 => registrador:REG3.clear
+key3 => registrador:REG4.clear
+key3 => registrador:REG5.clear
+key3 => registrador:REG6.clear
+key3 => registrador:REG7.clear
+sw17 => registrador:REG0.ld
+sw17 => registrador:REG1.ld
+sw17 => registrador:REG2.ld
+sw17 => registrador:REG3.ld
+sw17 => registrador:REG4.ld
+sw17 => registrador:REG5.ld
+sw17 => registrador:REG6.ld
+sw17 => registrador:REG7.ld
+D0[0] <= display:DISPLAY0.outt[0]
+D0[1] <= display:DISPLAY0.outt[1]
+D0[2] <= display:DISPLAY0.outt[2]
+D0[3] <= display:DISPLAY0.outt[3]
+D0[4] <= display:DISPLAY0.outt[4]
+D0[5] <= display:DISPLAY0.outt[5]
+D0[6] <= display:DISPLAY0.outt[6]
+D1[0] <= display:DISPLAY1.outt[0]
+D1[1] <= display:DISPLAY1.outt[1]
+D1[2] <= display:DISPLAY1.outt[2]
+D1[3] <= display:DISPLAY1.outt[3]
+D1[4] <= display:DISPLAY1.outt[4]
+D1[5] <= display:DISPLAY1.outt[5]
+D1[6] <= display:DISPLAY1.outt[6]
+D2[0] <= display:DISPLAY2.outt[0]
+D2[1] <= display:DISPLAY2.outt[1]
+D2[2] <= display:DISPLAY2.outt[2]
+D2[3] <= display:DISPLAY2.outt[3]
+D2[4] <= display:DISPLAY2.outt[4]
+D2[5] <= display:DISPLAY2.outt[5]
+D2[6] <= display:DISPLAY2.outt[6]
+D3[0] <= display:DISPLAY3.outt[0]
+D3[1] <= display:DISPLAY3.outt[1]
+D3[2] <= display:DISPLAY3.outt[2]
+D3[3] <= display:DISPLAY3.outt[3]
+D3[4] <= display:DISPLAY3.outt[4]
+D3[5] <= display:DISPLAY3.outt[5]
+D3[6] <= display:DISPLAY3.outt[6]
+
+
+|lab02|display:DISPLAY0
+inn[0] => Equal0.IN3
+inn[0] => Equal1.IN2
+inn[0] => Equal2.IN3
+inn[0] => Equal3.IN1
+inn[0] => Equal4.IN3
+inn[0] => Equal5.IN2
+inn[0] => Equal6.IN3
+inn[0] => Equal7.IN2
+inn[0] => Equal8.IN3
+inn[0] => Equal9.IN3
+inn[1] => Equal0.IN1
+inn[1] => Equal1.IN1
+inn[1] => Equal2.IN2
+inn[1] => Equal3.IN3
+inn[1] => Equal4.IN1
+inn[1] => Equal5.IN1
+inn[1] => Equal6.IN2
+inn[1] => Equal7.IN3
+inn[1] => Equal8.IN2
+inn[1] => Equal9.IN2
+inn[2] => Equal0.IN0
+inn[2] => Equal1.IN0
+inn[2] => Equal2.IN1
+inn[2] => Equal3.IN2
+inn[2] => Equal4.IN2
+inn[2] => Equal5.IN3
+inn[2] => Equal6.IN1
+inn[2] => Equal7.IN1
+inn[2] => Equal8.IN1
+inn[2] => Equal9.IN1
+inn[3] => Equal0.IN2
+inn[3] => Equal1.IN3
+inn[3] => Equal2.IN0
+inn[3] => Equal3.IN0
+inn[3] => Equal4.IN0
+inn[3] => Equal5.IN0
+inn[3] => Equal6.IN0
+inn[3] => Equal7.IN0
+inn[3] => Equal8.IN0
+inn[3] => Equal9.IN0
+outt[0] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[5] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[6] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|display:DISPLAY1
+inn[0] => Equal0.IN3
+inn[0] => Equal1.IN2
+inn[0] => Equal2.IN3
+inn[0] => Equal3.IN1
+inn[0] => Equal4.IN3
+inn[0] => Equal5.IN2
+inn[0] => Equal6.IN3
+inn[0] => Equal7.IN2
+inn[0] => Equal8.IN3
+inn[0] => Equal9.IN3
+inn[1] => Equal0.IN1
+inn[1] => Equal1.IN1
+inn[1] => Equal2.IN2
+inn[1] => Equal3.IN3
+inn[1] => Equal4.IN1
+inn[1] => Equal5.IN1
+inn[1] => Equal6.IN2
+inn[1] => Equal7.IN3
+inn[1] => Equal8.IN2
+inn[1] => Equal9.IN2
+inn[2] => Equal0.IN0
+inn[2] => Equal1.IN0
+inn[2] => Equal2.IN1
+inn[2] => Equal3.IN2
+inn[2] => Equal4.IN2
+inn[2] => Equal5.IN3
+inn[2] => Equal6.IN1
+inn[2] => Equal7.IN1
+inn[2] => Equal8.IN1
+inn[2] => Equal9.IN1
+inn[3] => Equal0.IN2
+inn[3] => Equal1.IN3
+inn[3] => Equal2.IN0
+inn[3] => Equal3.IN0
+inn[3] => Equal4.IN0
+inn[3] => Equal5.IN0
+inn[3] => Equal6.IN0
+inn[3] => Equal7.IN0
+inn[3] => Equal8.IN0
+inn[3] => Equal9.IN0
+outt[0] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[5] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[6] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|display:DISPLAY2
+inn[0] => Equal0.IN3
+inn[0] => Equal1.IN2
+inn[0] => Equal2.IN3
+inn[0] => Equal3.IN1
+inn[0] => Equal4.IN3
+inn[0] => Equal5.IN2
+inn[0] => Equal6.IN3
+inn[0] => Equal7.IN2
+inn[0] => Equal8.IN3
+inn[0] => Equal9.IN3
+inn[1] => Equal0.IN1
+inn[1] => Equal1.IN1
+inn[1] => Equal2.IN2
+inn[1] => Equal3.IN3
+inn[1] => Equal4.IN1
+inn[1] => Equal5.IN1
+inn[1] => Equal6.IN2
+inn[1] => Equal7.IN3
+inn[1] => Equal8.IN2
+inn[1] => Equal9.IN2
+inn[2] => Equal0.IN0
+inn[2] => Equal1.IN0
+inn[2] => Equal2.IN1
+inn[2] => Equal3.IN2
+inn[2] => Equal4.IN2
+inn[2] => Equal5.IN3
+inn[2] => Equal6.IN1
+inn[2] => Equal7.IN1
+inn[2] => Equal8.IN1
+inn[2] => Equal9.IN1
+inn[3] => Equal0.IN2
+inn[3] => Equal1.IN3
+inn[3] => Equal2.IN0
+inn[3] => Equal3.IN0
+inn[3] => Equal4.IN0
+inn[3] => Equal5.IN0
+inn[3] => Equal6.IN0
+inn[3] => Equal7.IN0
+inn[3] => Equal8.IN0
+inn[3] => Equal9.IN0
+outt[0] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[5] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[6] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|display:DISPLAY3
+inn[0] => Equal0.IN3
+inn[0] => Equal1.IN2
+inn[0] => Equal2.IN3
+inn[0] => Equal3.IN1
+inn[0] => Equal4.IN3
+inn[0] => Equal5.IN2
+inn[0] => Equal6.IN3
+inn[0] => Equal7.IN2
+inn[0] => Equal8.IN3
+inn[0] => Equal9.IN3
+inn[1] => Equal0.IN1
+inn[1] => Equal1.IN1
+inn[1] => Equal2.IN2
+inn[1] => Equal3.IN3
+inn[1] => Equal4.IN1
+inn[1] => Equal5.IN1
+inn[1] => Equal6.IN2
+inn[1] => Equal7.IN3
+inn[1] => Equal8.IN2
+inn[1] => Equal9.IN2
+inn[2] => Equal0.IN0
+inn[2] => Equal1.IN0
+inn[2] => Equal2.IN1
+inn[2] => Equal3.IN2
+inn[2] => Equal4.IN2
+inn[2] => Equal5.IN3
+inn[2] => Equal6.IN1
+inn[2] => Equal7.IN1
+inn[2] => Equal8.IN1
+inn[2] => Equal9.IN1
+inn[3] => Equal0.IN2
+inn[3] => Equal1.IN3
+inn[3] => Equal2.IN0
+inn[3] => Equal3.IN0
+inn[3] => Equal4.IN0
+inn[3] => Equal5.IN0
+inn[3] => Equal6.IN0
+inn[3] => Equal7.IN0
+inn[3] => Equal8.IN0
+inn[3] => Equal9.IN0
+outt[0] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[5] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[6] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|mux8_14:MUX0
+R1[0] => seq_out[0].DATAB
+R1[1] => seq_out[1].DATAB
+R1[2] => seq_out[2].DATAB
+R1[3] => seq_out[3].DATAB
+R1[4] => seq_out[4].DATAB
+R1[5] => seq_out[5].DATAB
+R1[6] => seq_out[6].DATAB
+R1[7] => seq_out[7].DATAB
+R1[8] => seq_out[8].DATAB
+R1[9] => seq_out[9].DATAB
+R1[10] => seq_out[10].DATAB
+R1[11] => seq_out[11].DATAB
+R1[12] => seq_out[12].DATAB
+R1[13] => seq_out[13].DATAB
+R2[0] => seq_out[0].DATAB
+R2[1] => seq_out[1].DATAB
+R2[2] => seq_out[2].DATAB
+R2[3] => seq_out[3].DATAB
+R2[4] => seq_out[4].DATAB
+R2[5] => seq_out[5].DATAB
+R2[6] => seq_out[6].DATAB
+R2[7] => seq_out[7].DATAB
+R2[8] => seq_out[8].DATAB
+R2[9] => seq_out[9].DATAB
+R2[10] => seq_out[10].DATAB
+R2[11] => seq_out[11].DATAB
+R2[12] => seq_out[12].DATAB
+R2[13] => seq_out[13].DATAB
+R3[0] => seq_out[0].DATAB
+R3[1] => seq_out[1].DATAB
+R3[2] => seq_out[2].DATAB
+R3[3] => seq_out[3].DATAB
+R3[4] => seq_out[4].DATAB
+R3[5] => seq_out[5].DATAB
+R3[6] => seq_out[6].DATAB
+R3[7] => seq_out[7].DATAB
+R3[8] => seq_out[8].DATAB
+R3[9] => seq_out[9].DATAB
+R3[10] => seq_out[10].DATAB
+R3[11] => seq_out[11].DATAB
+R3[12] => seq_out[12].DATAB
+R3[13] => seq_out[13].DATAB
+R4[0] => seq_out[0].DATAB
+R4[1] => seq_out[1].DATAB
+R4[2] => seq_out[2].DATAB
+R4[3] => seq_out[3].DATAB
+R4[4] => seq_out[4].DATAB
+R4[5] => seq_out[5].DATAB
+R4[6] => seq_out[6].DATAB
+R4[7] => seq_out[7].DATAB
+R4[8] => seq_out[8].DATAB
+R4[9] => seq_out[9].DATAB
+R4[10] => seq_out[10].DATAB
+R4[11] => seq_out[11].DATAB
+R4[12] => seq_out[12].DATAB
+R4[13] => seq_out[13].DATAB
+R5[0] => seq_out[0].DATAB
+R5[1] => seq_out[1].DATAB
+R5[2] => seq_out[2].DATAB
+R5[3] => seq_out[3].DATAB
+R5[4] => seq_out[4].DATAB
+R5[5] => seq_out[5].DATAB
+R5[6] => seq_out[6].DATAB
+R5[7] => seq_out[7].DATAB
+R5[8] => seq_out[8].DATAB
+R5[9] => seq_out[9].DATAB
+R5[10] => seq_out[10].DATAB
+R5[11] => seq_out[11].DATAB
+R5[12] => seq_out[12].DATAB
+R5[13] => seq_out[13].DATAB
+R6[0] => seq_out[0].DATAB
+R6[1] => seq_out[1].DATAB
+R6[2] => seq_out[2].DATAB
+R6[3] => seq_out[3].DATAB
+R6[4] => seq_out[4].DATAB
+R6[5] => seq_out[5].DATAB
+R6[6] => seq_out[6].DATAB
+R6[7] => seq_out[7].DATAB
+R6[8] => seq_out[8].DATAB
+R6[9] => seq_out[9].DATAB
+R6[10] => seq_out[10].DATAB
+R6[11] => seq_out[11].DATAB
+R6[12] => seq_out[12].DATAB
+R6[13] => seq_out[13].DATAB
+R7[0] => seq_out[0].DATAB
+R7[1] => seq_out[1].DATAB
+R7[2] => seq_out[2].DATAB
+R7[3] => seq_out[3].DATAB
+R7[4] => seq_out[4].DATAB
+R7[5] => seq_out[5].DATAB
+R7[6] => seq_out[6].DATAB
+R7[7] => seq_out[7].DATAB
+R7[8] => seq_out[8].DATAB
+R7[9] => seq_out[9].DATAB
+R7[10] => seq_out[10].DATAB
+R7[11] => seq_out[11].DATAB
+R7[12] => seq_out[12].DATAB
+R7[13] => seq_out[13].DATAB
+R8[0] => seq_out[0].DATAA
+R8[1] => seq_out[1].DATAA
+R8[2] => seq_out[2].DATAA
+R8[3] => seq_out[3].DATAA
+R8[4] => seq_out[4].DATAA
+R8[5] => seq_out[5].DATAA
+R8[6] => seq_out[6].DATAA
+R8[7] => seq_out[7].DATAA
+R8[8] => seq_out[8].DATAA
+R8[9] => seq_out[9].DATAA
+R8[10] => seq_out[10].DATAA
+R8[11] => seq_out[11].DATAA
+R8[12] => seq_out[12].DATAA
+R8[13] => seq_out[13].DATAA
+SW[14] => Equal0.IN2
+SW[14] => Equal1.IN0
+SW[14] => Equal2.IN2
+SW[14] => Equal3.IN1
+SW[14] => Equal4.IN2
+SW[14] => Equal5.IN1
+SW[14] => Equal6.IN2
+SW[14] => Equal7.IN2
+SW[15] => Equal0.IN1
+SW[15] => Equal1.IN2
+SW[15] => Equal2.IN0
+SW[15] => Equal3.IN0
+SW[15] => Equal4.IN1
+SW[15] => Equal5.IN2
+SW[15] => Equal6.IN1
+SW[15] => Equal7.IN1
+SW[16] => Equal0.IN0
+SW[16] => Equal1.IN1
+SW[16] => Equal2.IN1
+SW[16] => Equal3.IN2
+SW[16] => Equal4.IN0
+SW[16] => Equal5.IN0
+SW[16] => Equal6.IN0
+SW[16] => Equal7.IN0
+seq_out[0] <= seq_out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[1] <= seq_out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[2] <= seq_out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[3] <= seq_out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[4] <= seq_out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[5] <= seq_out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[6] <= seq_out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[7] <= seq_out[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[8] <= seq_out[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[9] <= seq_out[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[10] <= seq_out[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[11] <= seq_out[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[12] <= seq_out[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seq_out[13] <= seq_out[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|bcd_conversor:CONVERSOR0
+binary[0] => bcd[0].DATAIN
+binary[1] => LessThan22.IN8
+binary[1] => Add22.IN8
+binary[1] => aux_bin.DATAA
+binary[2] => LessThan18.IN8
+binary[2] => Add18.IN8
+binary[2] => aux_bin.DATAA
+binary[3] => LessThan15.IN8
+binary[3] => Add15.IN8
+binary[3] => aux_bin.DATAA
+binary[4] => LessThan12.IN8
+binary[4] => Add12.IN8
+binary[4] => aux_bin.DATAA
+binary[5] => LessThan9.IN8
+binary[5] => Add9.IN8
+binary[5] => aux_bin.DATAA
+binary[6] => LessThan7.IN8
+binary[6] => Add7.IN8
+binary[6] => aux_bin.DATAA
+binary[7] => LessThan5.IN8
+binary[7] => Add5.IN8
+binary[7] => aux_bin.DATAA
+binary[8] => LessThan3.IN8
+binary[8] => Add3.IN8
+binary[8] => aux_bin.DATAA
+binary[9] => LessThan2.IN8
+binary[9] => Add2.IN8
+binary[9] => aux_bin.DATAA
+binary[10] => LessThan1.IN8
+binary[10] => Add1.IN8
+binary[10] => aux_bin.DATAA
+binary[11] => LessThan0.IN6
+binary[11] => Add0.IN6
+binary[11] => aux_bin.DATAA
+binary[12] => LessThan0.IN5
+binary[12] => Add0.IN5
+binary[12] => aux_bin.DATAA
+binary[13] => LessThan0.IN4
+binary[13] => Add0.IN4
+binary[13] => aux_bin.DATAA
+bcd[0] <= binary[0].DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[3] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[4] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[5] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[6] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[7] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[8] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[9] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[10] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[11] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[12] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[13] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[14] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+bcd[15] <= aux_bin.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG0|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG0|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG1|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG1|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG2|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG2|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG3|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG3|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG4|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG4|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG5|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG5|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG6|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG6|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7
+registrador_in[0] => reg_in.IN0
+registrador_in[1] => reg_in.IN0
+registrador_in[2] => reg_in.IN0
+registrador_in[3] => reg_in.IN0
+registrador_in[4] => reg_in.IN0
+registrador_in[5] => reg_in.IN0
+registrador_in[6] => reg_in.IN0
+registrador_in[7] => reg_in.IN0
+registrador_in[8] => reg_in.IN0
+registrador_in[9] => reg_in.IN0
+registrador_in[10] => reg_in.IN0
+registrador_in[11] => reg_in.IN0
+registrador_in[12] => reg_in.IN0
+registrador_in[13] => reg_in.IN0
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+ld => reg_in.IN1
+clear => ffd:FF13.C
+clear => ffd:FF12.C
+clear => ffd:FF11.C
+clear => ffd:FF10.C
+clear => ffd:FF9.C
+clear => ffd:FF8.C
+clear => ffd:FF7.C
+clear => ffd:FF6.C
+clear => ffd:FF5.C
+clear => ffd:FF4.C
+clear => ffd:FF3.C
+clear => ffd:FF2.C
+clear => ffd:FF1.C
+clear => ffd:FF0.C
+clk => ffd:FF13.clk
+clk => ffd:FF12.clk
+clk => ffd:FF11.clk
+clk => ffd:FF10.clk
+clk => ffd:FF9.clk
+clk => ffd:FF8.clk
+clk => ffd:FF7.clk
+clk => ffd:FF6.clk
+clk => ffd:FF5.clk
+clk => ffd:FF4.clk
+clk => ffd:FF3.clk
+clk => ffd:FF2.clk
+clk => ffd:FF1.clk
+clk => ffd:FF0.clk
+registrador_out[0] <= ffd:FF0.q
+registrador_out[1] <= ffd:FF1.q
+registrador_out[2] <= ffd:FF2.q
+registrador_out[3] <= ffd:FF3.q
+registrador_out[4] <= ffd:FF4.q
+registrador_out[5] <= ffd:FF5.q
+registrador_out[6] <= ffd:FF6.q
+registrador_out[7] <= ffd:FF7.q
+registrador_out[8] <= ffd:FF8.q
+registrador_out[9] <= ffd:FF9.q
+registrador_out[10] <= ffd:FF10.q
+registrador_out[11] <= ffd:FF11.q
+registrador_out[12] <= ffd:FF12.q
+registrador_out[13] <= ffd:FF13.q
+
+
+|lab02|registrador:REG7|ffd:FF13
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF12
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF11
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF10
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF9
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF8
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF7
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF6
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF5
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF4
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF3
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF2
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF1
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab02|registrador:REG7|ffd:FF0
+clk => qs.CLK
+d => qs.DATAIN
+p => qs.IN0
+p => qs.PRESET
+c => qs.IN1
+q <= qs.DB_MAX_OUTPUT_PORT_TYPE
+
+

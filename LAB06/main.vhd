@@ -1,0 +1,121 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity lab06 is
+    port(clk_27, sw17: in std_logic;
+         sw: in std_logic_vector(7 downto 0);
+
+        ram_out_exibir, out_display_ex: out std_logic_vector(15 downto 0);
+        opcode_ex: out std_logic_vector(3 downto 0);
+        ir_ex: out std_logic_vector(15 downto 0);
+        pc_out_ex: out std_logic_vector(7 downto 0);
+
+         ledg0: out std_logic;
+         hex0, hex1, hex2, hex3: out std_logic_vector(6 downto 0);
+         hex4: out std_logic_vector(6 downto 0));
+end lab06;
+
+architecture processador_3instrucoes of lab06 is
+
+component clk_div is
+	port (clk_in : in std_logic;
+			clk_out : out std_logic);
+end component;
+
+component bcd4_conversor is
+    port(binary: in std_logic_vector(15 downto 0);
+        bcd: out std_logic_vector(15 downto 0));
+end component;
+
+component operational_unit is
+    port(clock, s, W_wr, Rp_rd, Rq_rd, s0: in std_logic;
+         W_addr, Rp_addr, Rq_addr: in std_logic_vector(3 downto 0);
+         R_data: in std_logic_vector(15 downto 0);
+         W_data: out std_logic_vector(15 downto 0));
+end component;
+
+component control_unit is
+    port(clock, clear: in std_logic;
+         rom_out: in std_logic_vector(15 downto 0);
+         rom_addr: out std_logic_vector(7 downto 0);
+         D_addr: out std_logic_vector(7 downto 0);
+
+         opcode_ex: out std_logic_vector(3 downto 0);
+         pc_out_ex: out std_logic_vector(7 downto 0);
+         ir_out_ex: out std_logic_vector(15 downto 0);
+
+         D_wr, RF_s, RF_W_wr, RF_Rp_rd, RF_Rq_rd, alu_s0, I_rd: out std_logic;
+         RF_W_addr, RF_Rp_addr, RF_Rq_addr: out std_logic_vector(3 downto 0));
+end component;
+
+component memory_ram IS
+	port(address_a: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		address_b: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		clock: IN STD_LOGIC  := '1';
+		data_a: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		data_b: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		wren_a: IN STD_LOGIC  := '0';
+		wren_b: IN STD_LOGIC  := '0';
+		q_a: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+		q_b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
+end component;
+
+component memory_rom IS
+	PORT(address: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		clock: IN STD_LOGIC  := '1';
+		q: OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
+end component;
+
+component display is
+	port(inn: in std_logic_vector (3 downto 0);
+		outt: out std_logic_vector (6 downto 0));
+end component;	
+
+signal out_display, bcd_aux, rom_out, ram_out, ram_in: std_logic_vector(15 downto 0);
+signal rom_addr, D_addr: std_logic_vector(7 downto 0);
+signal D_wr, RF_s, RF_W_wr, RF_Rp_rd, RF_Rq_rd, alu_s0, clk, clock, I_rd: std_logic;
+signal RF_W_addr, RF_Rp_addr, RF_Rq_addr: std_logic_vector(3 downto 0);
+signal hex0aux,hex1aux,hex2aux,hex3aux,hex4aux: std_logic_vector(6 downto 0);
+
+signal opcode: std_logic_vector(3 downto 0);
+signal pc_out: std_logic_vector(7 downto 0);
+signal ir_out: std_logic_vector(15 downto 0);
+
+begin
+
+DIVCLOCK: clk_div port map(clk_27, clk);
+
+clock <= clk or sw17;
+
+INSTRUCAO: memory_rom port map(rom_addr, I_rd, rom_out);
+
+CONTROLLER00: control_unit port map(clock, '0', rom_out, rom_addr, D_addr, opcode, pc_out, ir_out, D_wr, RF_s, RF_W_wr, RF_Rp_rd, RF_Rq_rd, alu_s0, I_rd, RF_W_addr, RF_Rp_addr, RF_Rq_addr);
+
+OPERATOR00: operational_unit port map(clock, RF_s, RF_W_wr, RF_Rp_rd, RF_Rq_rd, alu_s0, RF_W_addr, RF_Rp_addr, RF_Rq_addr, ram_out, ram_in);
+
+DADOS: memory_ram port map(sw, D_addr, clk, "0000000000000000", ram_in, '0', D_wr, out_display, ram_out);
+
+BCD4CON: bcd4_conversor port map(out_display, bcd_aux);
+
+HEX000: display port map(bcd_aux(3 downto 0), hex0aux);
+HEX001: display port map(bcd_aux(7 downto 4), hex1aux);
+HEX002: display port map(bcd_aux(11 downto 8), hex2aux);
+HEX003: display port map(bcd_aux(15 downto 12), hex3aux);
+
+hex0 <= hex0aux;
+hex1 <= hex1aux;
+hex2 <= hex2aux;
+hex3 <= hex3aux;
+
+ledg0 <= clock;
+
+HEX004: display port map(opcode, hex4aux);
+hex4 <= hex4aux;
+
+ram_out_exibir <= ram_out;
+out_display_ex <= out_display;
+opcode_ex <= opcode;
+ir_ex <= ir_out;
+pc_out_ex <= pc_out;
+
+end processador_3instrucoes;

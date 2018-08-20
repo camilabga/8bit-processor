@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB06\simulation\qsim
+vlab06
+Z1 !s100 1DV8lJ1L15=8b<@XJ<^6o3
+Z2 IXaeCN:@ZBM4XfIL95_:Q51
+Z3 V?@EGW8Xob;IN>ZD4B[i[I1
+Z4 dC:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\LAB06\simulation\qsim
+Z5 w1521464110
+Z6 8lab06.vo
+Z7 Flab06.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|lab06.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1521464111.777000
+Z12 !s107 lab06.vo|
+!s101 -O0
+vlab06_vlg_check_tst
+!i10b 1
+Z13 !s100 nljHgI^:B>D7:E8jPWn5d1
+Z14 IWnkYWzPOA7M>=P[FC4OYd1
+Z15 Vh0j3XQ9^_kacgj_9WnFDi2
+R4
+R5
+Z16 8lab06.vt
+Z17 Flab06.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z18 !s108 1521464112.047000
+Z19 !s107 lab06.vt|
+Z20 !s90 -work|work|lab06.vt|
+!s101 -O0
+R10
+vlab06_vlg_sample_tst
+!i10b 1
+Z21 !s100 e^^48fgMN3hKjOle93B190
+Z22 I0Im:9]_a^ncQ6^Dn96m2`2
+Z23 VP3RNo^:PMO?`JIL:DVNT93
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vlab06_vlg_vec_tst
+!i10b 1
+!s100 CW>UPFdZBNogedm]:037^1
+I=zW6>=[1O6DD;lOoR:DEE0
+Z24 V9=C7j2A^>gnQI6n19c]O[2
+R4
+R5
+R16
+R17
+Z25 L0 1269
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

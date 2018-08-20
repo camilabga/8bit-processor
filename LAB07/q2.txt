@@ -1,0 +1,73 @@
+	MOV [239], 0
+	MOV [233], 9
+	MOV [232], 0
+
+start: 	MOV A, [239]
+	SHL A, 7
+	SHR A, 7
+	MOV B, [233]
+	SHR B, 4
+	SHL B, 4
+	MOV C, [232]
+	SHL C, 4
+	SHR C, 4
+	MOV D, [232]
+	SHR D, 4
+	SHL D, 4
+	CMP A, 0
+	JE down
+
+up:	MOV A, [233]
+	SHL A, 4
+	SHR A, 4
+	INC A
+	CMP A, 10
+	JNZ update
+	MOV A, 0
+	ADD B, 16
+	CMP B, 160
+	JNZ update
+	MOV B, 0
+	MOV C, [232]
+	SHL C, 4
+	SHR C, 4
+	INC C
+	CMP C, 10
+	JNZ update
+	MOV C, 0
+	ADD D, 16
+	CMP D, 160
+	JNZ update
+	MOV D, 0
+	JMP update
+
+down:	MOV A, [233]
+	SHL A, 4
+	SHR A, 4
+	DEC A
+	CMP A, 255
+	JNZ update
+	MOV A, 9
+	SUB B, 16
+	CMP B, 240
+	JNZ update
+	MOV B, 144
+	MOV C, [232]
+	SHL C, 4
+	SHR C, 4
+	DEC C
+	CMP C, 255
+	JNZ update
+	MOV C, 9
+	SUB D, 16
+	CMP D, 240
+	JNZ update
+	MOV D, 144
+	JMP update
+	 
+
+update:	OR A, B
+	MOV [233], A
+	OR C, D
+	MOV [232], C
+	JMP start

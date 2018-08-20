@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity contador is
+    port (clock, clear, load: in std_logic;
+          C: out std_logic_vector (3 downto 0));
+end contador;
+
+architecture counter of contador is
+    component FFD is
+        port(clk,D,P,C:in bit;
+            q:out bit);
+    end component;
+  
+    signal in_D: std_logic_vector (3 downto 0);
+    signal z: std_logic_vector (3 downto 0);
+    signal in_preset: std_logic_vector (3 downto 0);
+
+    begin
+
+    in_D(0) <= not z(0); 
+    in_D(1) <= (not z(1) and z(0)) or (z(1) and not z(0));
+    in_D(2) <= (z(2) and not z(1)) or (z(2) and not z(0)) or (not z(2) and z(1) and z(0));
+    in_D(3) <= (z(3) and not z(2)) or (z(3) and not z(1)) or (z(3) and not z(0)) or (not z(3) and z(2) and z(1) and z(0));
+
+    in_preset(0) <= (not load and z(0)) or (load and in_D(0));
+    in_preset(1) <= (not load and z(1)) or (load and in_D(1));
+    in_preset(2) <= (not load and z(2)) or (load and in_D(2));
+    in_preset(3) <= (not load and z(3)) or (load and in_D(3));
+
+    FFD0: ffd port map(clock, in_preset(0), '1', clear, z(0));
+    FFD1: ffd port map(clock, in_preset(1), '1', clear, z(1));
+    FFD2: ffd port map(clock, in_preset(2), '1', clear, z(2));
+    FFD3: ffd port map(clock, in_preset(3), '1', clear, z(3));
+
+end counter;

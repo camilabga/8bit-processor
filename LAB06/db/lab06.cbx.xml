@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab06">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab06|memory_ram:DADOS|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_tf92.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab06|memory_rom:INSTRUCAO|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0a81.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

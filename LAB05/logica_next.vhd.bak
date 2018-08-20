@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity in_reg is
+    port(current, next_value, rom, carrega_rom: in std_logic_vector(12 downto 0);
+         rd: in std_logic;
+         in_registrador: out std_logic_vector(12 downto 0));
+end in_reg;
+
+architecture logic_in_reg of in_reg is
+
+signal aux_reg: std_logic_vector(12 downto 0);
+
+begin
+
+aux_reg(0) <= (carrega_rom(0) and rom(0) and not rd) or (not carrega_rom and current(0) and not rd) or (rd and next_value(0));
+aux_reg(1) <= (carrega_rom(1) and rom(1) and not rd) or (not carrega_rom and current(1) and not rd) or (rd and next_value(1));
+aux_reg(2) <= (carrega_rom(2) and rom(2) and not rd) or (not carrega_rom and current(2) and not rd) or (rd and next_value(2));
+aux_reg(3) <= (carrega_rom(3) and rom(3) and not rd) or (not carrega_rom and current(3) and not rd) or (rd and next_value(3));
+aux_reg(4) <= (carrega_rom(4) and rom(4) and not rd) or (not carrega_rom and current(4) and not rd) or (rd and next_value(4));
+aux_reg(5) <= (carrega_rom(5) and rom(5) and not rd) or (not carrega_rom and current(5) and not rd) or (rd and next_value(5));
+aux_reg(6) <= (carrega_rom(6) and rom(6) and not rd) or (not carrega_rom and current(6) and not rd) or (rd and next_value(6));
+aux_reg(7) <= (carrega_rom(7) and rom(7) and not rd) or (not carrega_rom and current(7) and not rd) or (rd and next_value(7));
+aux_reg(8) <= (carrega_rom(8) and rom(8) and not rd) or (not carrega_rom and current(8) and not rd) or (rd and next_value(8));
+aux_reg(9) <= (carrega_rom(9) and rom(9) and not rd) or (not carrega_rom and current(9) and not rd) or (rd and next_value(9));
+aux_reg(10) <= (carrega_rom(10) and rom(10) and not rd) or (not carrega_rom and current(10) and not rd) or (rd and next_value(10));
+aux_reg(11) <= (carrega_rom(11) and rom(11) and not rd) or (not carrega_rom and current(11) and not rd) or (rd and next_value(11));
+aux_reg(12) <= (carrega_rom(12) and rom(12) and not rd) or (not carrega_rom and current(12) and not rd) or (rd and next_value(12));
+
+
+end logic_in_reg;

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Camila Barbosa\Documents\Sistemas Digitais\LAB03\simulation\qsim
+vlab03
+Z1 !s100 8IAK<g=clZ3YH41[P<BEM0
+Z2 IcO]gY36BzH`h;6@W?l=WZ0
+Z3 VRBaT3E=2z`44GNniMA2bm3
+Z4 dC:\Users\Camila Barbosa\Documents\Sistemas Digitais\LAB03\simulation\qsim
+Z5 w1520558324
+Z6 8lab03.vo
+Z7 Flab03.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|lab03.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1520558325.549000
+Z12 !s107 lab03.vo|
+!s101 -O0
+vlab03_vlg_check_tst
+!i10b 1
+Z13 !s100 j8PNCaTE;Lb5^fDH_Roe<3
+Z14 IW;A3UQ<g<laY0ahVF6;5]2
+Z15 V_5UeicKAcjE?@nRXY:B^L0
+R4
+R5
+Z16 8lab03.vt
+Z17 Flab03.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z18 !s108 1520558325.705000
+Z19 !s107 lab03.vt|
+Z20 !s90 -work|work|lab03.vt|
+!s101 -O0
+R10
+vlab03_vlg_sample_tst
+!i10b 1
+Z21 !s100 4GH6VIc0ozdJUSY397U153
+Z22 IJ40ViWh_hdFemBX;Fa8Yb2
+Z23 VPHK3PZXU^]U16GNGSiR3:2
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vlab03_vlg_vec_tst
+!i10b 1
+Z24 !s100 me_<=ULGk<bCo[kbd6ILc0
+Z25 I9>iF`jnJmci2S85KSzFE02
+Z26 VBX1iA@Xem_4b6ElU=mR7c1
+R4
+R5
+R16
+R17
+Z27 L0 1060
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

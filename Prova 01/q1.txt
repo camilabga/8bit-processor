@@ -1,0 +1,31 @@
+	MOV [200], 5
+	MOV [201], 7
+	MOV [202], 1
+	MOV [203], 2
+	MOV [204], 3
+	MOV [205], 4
+	MOV [206], 16
+	MOV [207], 8
+	MOV [208], 9
+	MOV [209], 10
+
+	MOV A, [200]
+	MOV D, 200
+	MOV B, 201
+	CALL start
+	MOV [232], A
+	MOV [233], D
+	HLT
+
+start: 	CMP A, [B]
+	JB salva
+
+inc: 	INC B
+	CMP B, 209
+	JNA start
+	RET
+	
+
+salva: 	MOV D, B
+	MOV A, [B]
+	JMP inc

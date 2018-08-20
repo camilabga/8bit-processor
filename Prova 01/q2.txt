@@ -1,0 +1,30 @@
+	MOV [200], 'a'
+	MOV [201], 'r'
+	MOV [202], 'a'
+	MOV [203], 'r'
+	MOV [204], 'a'
+	MOV [205], 't'
+
+	MOV A, 200
+	MOV D, 205
+
+	CALL comp
+	HLT
+
+comp:	MOV C, [A]
+	CMP C, [D]
+	JNE falso
+	CMP A, D
+	JE pali
+	INC A
+	CMP A, D
+	JE pali
+	DEC D
+	JMP comp
+
+pali:	MOV [232], 48
+	RET
+
+
+falso:	MOV [232], 49
+	RET

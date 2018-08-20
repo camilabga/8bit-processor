@@ -1,0 +1,19 @@
+entity lab05 is
+    port(sw0, sw1, key3, clock_27: in std_logic;
+         hex0, hex1, hex2, hex3, hex4, hex5: out std_logic_vector(3 downto 0);
+         ledr0, ledr1: out std_logic);
+end lab05;
+
+architecture main_fifo of lab05 is
+
+component contador6bits is
+    port (clock, clear, load: in std_logic;
+          C: out std_logic_vector (5 downto 0));
+end component;
+
+
+
+
+begin
+
+end main_fifo;

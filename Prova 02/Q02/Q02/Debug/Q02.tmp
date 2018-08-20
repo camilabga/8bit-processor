@@ -1,0 +1,45 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\Debug\Q02.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Q02.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Q02.map</FILE>
+  <FILE>Q02.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <SETUP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>49</LINE></SETUP>
+  <BTS><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>14</LINE></BTS>
+  <ZERAR_COUNTER><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>106</LINE></ZERAR_COUNTER>
+  <TIMER><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>20</LINE></TIMER>
+  <TURBO><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>94</LINE></TURBO>
+  <EXIBIR><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>178</LINE></EXIBIR>
+  <CONTAR_DOWN><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>154</LINE></CONTAR_DOWN>
+  <CONTAR_UP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>123</LINE></CONTAR_UP>
+  <LOOP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>78</LINE></LOOP>
+  <UP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>119</LINE></UP>
+  <DOWN><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>151</LINE></DOWN>
+  <CARRY0UP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>138</LINE></CARRY0UP>
+  <CARRY1UP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>145</LINE></CARRY1UP>
+  <CARRY0DOWN><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>161</LINE></CARRY0DOWN>
+  <CARRY1DOWN><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>168</LINE></CARRY1DOWN>
+  <DELAY><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>201</LINE></DELAY>
+  <OUTER_LOOP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>204</LINE></OUTER_LOOP>
+  <DELAY_LOOP><FILE>C:\Users\Camila Barbosa\Documents\UFRN\Sistemas Digitais\Prova 02\Q02\Q02\main.asm</FILE><LINE>208</LINE></DELAY_LOOP>
+ </LABELS>
+</ASSEMBLER_INFO>

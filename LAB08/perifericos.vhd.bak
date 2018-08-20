@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity banco_ABCD is
+	port(	write_ABCD				: in 	std_logic_vector(7 downto 0);
+	     	r_addr					: in	std_logic_vector(1 downto 0);
+			clk, wr_ABCD			: in  std_logic;
+	     	out_ABCD, A				: out std_logic_vector(7 downto 0)
+			;B,C,D					: out std_logic_vector(7 downto 0)--teste
+			);
+end banco_ABCD;
+
+architecture ckt of banco_ABCD is
+	component Registrador8Bits is
+		port(clock,ld,Preset,Clear	: in std_logic;
+				D: in std_logic_vector(7 downto 0);
+				Q:out std_logic_vector(7 downto 0));
+	end component;
+
+	signal sregA, sregB, sregC, sregD : std_logic_vector(7 downto 0);
+	signal smuxA, smuxB, smuxC, smuxD, sout_ABCD : std_logic_vector(7 downto 0);
+	signal sLd_reg : std_logic_vector(3 downto 0);
+		
+begin
+	
+end ckt;
+
+

@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity mde is
+	port (clk, r		: in std_logic;
+			rd				: in std_logic;
+			pc, ir, mem, ram 	: out std_logic:='0');
+end mde;
+architecture ckt of mde is
+	type state_type is (inicio,e1, e2,e3, op);
+	signal y_present, y_next : state_type;
+	begin
+		
+		process (y_present)
+		begin
+			case y_present is		--mde
+				when inicio =>
+					y_next <= e1;
+					pc 	<= '1';
+					ir		<= '0';
+					mem 	<= '0';
+					ram 	<= '0';
+			end case;
+		end process;
+		process (clk,r)
+		begin
+			if r = '1' then
+				y_present <= inicio;
+			elsif (clk'event and clk = '1') then
+				y_present <= y_next;
+			end if;
+		end process;
+end ckt;

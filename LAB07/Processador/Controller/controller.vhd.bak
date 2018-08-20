@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ula is
+	port(A,entrada			:in  std_logic_vector(7 downto 0);
+	     sel_op				:in  std_logic_vector(3 downto 0);
+		  clr, clk, ld		:in  std_logic;
+	     saida				:out std_logic_vector(7 downto 0);
+	     c,z					:out std_logic);
+end ula;
+
+architecture arq of ula is
+
+begin
+	
+end arq;
+
+

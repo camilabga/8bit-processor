@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decod_moeda_out is
+    port(valor_moeda: in std_logic_vector(9 downto 0);
+         manter_moeda, ultima_moeda: in std_logic;
+         out_moeda: out std_logic_vector(5 downto 0));
+end decod_moeda_out;
+
+architecture decod_coin_out of decod_moeda_out is
+
+signal out_moeda_aux, saida_aux: std_logic;
+
+begin
+
+out_moeda_aux <= "100000" when valor_moeda = "0001100100" else
+                 "010000" when valor_moeda = "0000110010" else
+                 "001000" when valor_moeda = "0000011001" else
+                 "000100" when valor_moeda = "0000000110" else
+                 "000010" when valor_moeda = "0000000101" else
+                 "000001" when valor_moeda = "0000000001" else
+                 "000000";
+
+saida_aux(0) <= (manter_moeda or ultima_moeda) and out_moeda_aux(0);
+saida_aux(1) <= (manter_moeda or ultima_moeda) and out_moeda_aux(1);
+saida_aux(2) <= (manter_moeda or ultima_moeda) and out_moeda_aux(2);
+saida_aux(3) <= (manter_moeda or ultima_moeda) and out_moeda_aux(3);
+saida_aux(4) <= (manter_moeda or ultima_moeda) and out_moeda_aux(4);
+saida_aux(5) <= (manter_moeda or ultima_moeda) and out_moeda_aux(5);
+
+end decod_coin_out;

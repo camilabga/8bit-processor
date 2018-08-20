@@ -1,0 +1,91 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/08/2018 17:42:35"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    processador_perifericos_timer_spi
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module processador_perifericos_timer_spi_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk27;
+reg DAT;
+reg [3:0] KEY3_0;
+reg [7:0] SW7_0;
+reg [7:0] SW15_8;
+// wires                                               
+wire CMD;
+wire DAT3;
+wire [6:0] HEX0;
+wire [6:0] HEX1;
+wire [6:0] HEX2;
+wire [6:0] HEX3;
+wire [6:0] HEX4;
+wire [6:0] HEX5;
+wire [6:0] HEX6;
+wire [6:0] HEX7;
+wire [7:0] LEDG7_0;
+wire [7:0] LEDR7_0;
+wire [7:0] LEDR15_8;
+wire LEDR17;
+wire [7:0] opcode;
+wire [7:0] ram_out;
+wire SCK;
+
+// assign statements (if any)                          
+processador_perifericos_timer_spi i1 (
+// port map - connection between master ports and signals/registers   
+	.clk27(clk27),
+	.CMD(CMD),
+	.DAT(DAT),
+	.DAT3(DAT3),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.HEX4(HEX4),
+	.HEX5(HEX5),
+	.HEX6(HEX6),
+	.HEX7(HEX7),
+	.KEY3_0(KEY3_0),
+	.LEDG7_0(LEDG7_0),
+	.LEDR7_0(LEDR7_0),
+	.LEDR15_8(LEDR15_8),
+	.LEDR17(LEDR17),
+	.opcode(opcode),
+	.ram_out(ram_out),
+	.SCK(SCK),
+	.SW7_0(SW7_0),
+	.SW15_8(SW15_8)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+initial 
+begin 
+#1000000 $finish;
+end 
+endmodule
+

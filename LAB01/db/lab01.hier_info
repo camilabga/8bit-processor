@@ -1,0 +1,169 @@
+|lab01
+clk_27 => clkDiv:CLK.clk_in
+sw => mde:MDE0.sw0
+r0 => mde:MDE0.r
+r0 => sym_button:SB0.r
+r0 => sym_button:SB1.r
+r0 => sym_button:SB2.r
+r0 => sym_button:SB3.r
+buttons[0] => sym_button:SB0.bi
+buttons[1] => sym_button:SB1.bi
+buttons[2] => sym_button:SB2.bi
+buttons[3] => sym_button:SB3.bi
+ledr <= mde:MDE0.ledr0
+display7[0] <= display:DISP.outt[0]
+display7[1] <= display:DISP.outt[1]
+display7[2] <= display:DISP.outt[2]
+display7[3] <= display:DISP.outt[3]
+display7[4] <= display:DISP.outt[4]
+display7[5] <= display:DISP.outt[5]
+display7[6] <= display:DISP.outt[6]
+
+
+|lab01|clkDiv:CLK
+clk_in => ax.CLK
+clk_in => cnt[0].CLK
+clk_in => cnt[1].CLK
+clk_in => cnt[2].CLK
+clk_in => cnt[3].CLK
+clk_in => cnt[4].CLK
+clk_in => cnt[5].CLK
+clk_in => cnt[6].CLK
+clk_in => cnt[7].CLK
+clk_in => cnt[8].CLK
+clk_in => cnt[9].CLK
+clk_in => cnt[10].CLK
+clk_in => cnt[11].CLK
+clk_in => cnt[12].CLK
+clk_in => cnt[13].CLK
+clk_in => cnt[14].CLK
+clk_in => cnt[15].CLK
+clk_in => cnt[16].CLK
+clk_in => cnt[17].CLK
+clk_in => cnt[18].CLK
+clk_in => cnt[19].CLK
+clk_in => cnt[20].CLK
+clk_in => cnt[21].CLK
+clk_in => cnt[22].CLK
+clk_in => cnt[23].CLK
+clk_out <= ax.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab01|mde:MDE0
+clk => y_present~1.DATAIN
+sw0 => Selector0.IN6
+sw0 => Selector6.IN2
+r => y_present~3.DATAIN
+key[0] => Equal0.IN2
+key[0] => Equal1.IN3
+key[0] => Equal2.IN3
+key[0] => Equal3.IN2
+key[0] => Equal4.IN2
+key[1] => Equal0.IN1
+key[1] => Equal1.IN2
+key[1] => Equal2.IN2
+key[1] => Equal3.IN1
+key[1] => Equal4.IN3
+key[2] => Equal0.IN0
+key[2] => Equal1.IN1
+key[2] => Equal2.IN1
+key[2] => Equal3.IN3
+key[2] => Equal4.IN1
+key[3] => Equal0.IN3
+key[3] => Equal1.IN0
+key[3] => Equal2.IN0
+key[3] => Equal3.IN0
+key[3] => Equal4.IN0
+ledr0 <= ledr0.DB_MAX_OUTPUT_PORT_TYPE
+number[0] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+number[1] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+number[2] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+number[3] <= <GND>
+
+
+|lab01|display:DISP
+inn[0] => Equal0.IN3
+inn[0] => Equal1.IN2
+inn[0] => Equal2.IN3
+inn[0] => Equal3.IN1
+inn[0] => Equal4.IN3
+inn[0] => Equal5.IN2
+inn[0] => Equal6.IN3
+inn[0] => Equal7.IN2
+inn[0] => Equal8.IN3
+inn[0] => Equal9.IN3
+inn[1] => Equal0.IN1
+inn[1] => Equal1.IN1
+inn[1] => Equal2.IN2
+inn[1] => Equal3.IN3
+inn[1] => Equal4.IN1
+inn[1] => Equal5.IN1
+inn[1] => Equal6.IN2
+inn[1] => Equal7.IN3
+inn[1] => Equal8.IN2
+inn[1] => Equal9.IN2
+inn[2] => Equal0.IN0
+inn[2] => Equal1.IN0
+inn[2] => Equal2.IN1
+inn[2] => Equal3.IN2
+inn[2] => Equal4.IN2
+inn[2] => Equal5.IN3
+inn[2] => Equal6.IN1
+inn[2] => Equal7.IN1
+inn[2] => Equal8.IN1
+inn[2] => Equal9.IN1
+inn[3] => Equal0.IN2
+inn[3] => Equal1.IN3
+inn[3] => Equal2.IN0
+inn[3] => Equal3.IN0
+inn[3] => Equal4.IN0
+inn[3] => Equal5.IN0
+inn[3] => Equal6.IN0
+inn[3] => Equal7.IN0
+inn[3] => Equal8.IN0
+inn[3] => Equal9.IN0
+outt[0] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[1] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[2] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[3] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[4] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[5] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+outt[6] <= outt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab01|sym_button:SB0
+clk => y_present~1.DATAIN
+r => y_present~3.DATAIN
+bi => y_next.a.IN0
+bi => Selector0.IN1
+bi => y_next.b.DATAB
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab01|sym_button:SB1
+clk => y_present~1.DATAIN
+r => y_present~3.DATAIN
+bi => y_next.a.IN0
+bi => Selector0.IN1
+bi => y_next.b.DATAB
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab01|sym_button:SB2
+clk => y_present~1.DATAIN
+r => y_present~3.DATAIN
+bi => y_next.a.IN0
+bi => Selector0.IN1
+bi => y_next.b.DATAB
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab01|sym_button:SB3
+clk => y_present~1.DATAIN
+r => y_present~3.DATAIN
+bi => y_next.a.IN0
+bi => Selector0.IN1
+bi => y_next.b.DATAB
+bo <= bo.DB_MAX_OUTPUT_PORT_TYPE
+
+

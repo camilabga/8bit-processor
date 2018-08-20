@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity shl_8bits is
+	port(a,b	:in  std_logic_vector(7 downto 0);
+	     s	:out std_logic_vector(7 downto 0));
+end or_8bits;
+
+architecture arq of or_8bits is
+  begin
+	s(0) <= a(0) or b(0);
+	s(1) <= a(1) or b(1);
+	s(2) <= a(2) or b(2);
+	s(3) <= a(3) or b(3);
+	s(4) <= a(4) or b(4);
+	s(5) <= a(5) or b(5);
+	s(6) <= a(6) or b(6);
+	s(7) <= a(7) or b(7);
+	 
+end arq;
+
+

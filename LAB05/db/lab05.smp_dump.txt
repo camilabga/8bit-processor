@@ -1,0 +1,12 @@
+
+State Machine - |lab05|sym_button:BTS1|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
+
+State Machine - |lab05|sym_button:BTS0|y_present
+Name y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 
+y_present.b 0 1 1 
+y_present.c 1 0 1 
